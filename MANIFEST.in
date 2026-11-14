@@ -1,0 +1,9 @@
+include README.md CHANGELOG.md CONTRIBUTING.md SECURITY.md requirements.txt
+recursive-include docs *.md
+include config/sources.example.json config/sources.live.json
+include scripts/check_wheel.py
+recursive-include tests *.py
+recursive-include sentinel/static *.html *.css *.js
+
+include config/sources.darkweb.json
+recursive-include deployment/tor Dockerfile torrc compose.yml .dockerignore

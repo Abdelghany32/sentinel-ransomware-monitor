@@ -1,0 +1,13 @@
+services:
+  tor:
+    build: .
+    ports:
+      - "127.0.0.1:9050:9050"
+    read_only: true
+    tmpfs:
+      - /tmp:mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: "no"

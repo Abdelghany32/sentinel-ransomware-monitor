@@ -1,0 +1,35 @@
+{
+  "sources": [
+    {
+      "name": "RansomLook · recent posts",
+      "enabled": true,
+      "type": "ransomlook",
+      "url": "https://www.ransomlook.io/api/recent",
+      "interval_seconds": 900,
+      "delay_seconds": 3
+    },
+    {
+      "name": "Ransomware.live PRO · recent victims",
+      "enabled": false,
+      "type": "ransomware_live",
+      "url": "https://api-pro.ransomware.live/victims/recent",
+      "interval_seconds": 900,
+      "delay_seconds": 3
+    },
+    {
+      "name": "Endzone · public onion listings",
+      "enabled": true,
+      "type": "onion_html",
+      "url": "http://endzonezgz3sqzmtqg4acp4z7ao7xc6vunfhezjsnfqrm2ksudsredyd.onion/",
+      "proxy": "socks5h://127.0.0.1:9050",
+      "actor": "endzone",
+      "item_selector": ".glow-card",
+      "fields": {
+        "name": "h2.company-name"
+      },
+      "interval_seconds": 3600,
+      "delay_seconds": 10,
+      "directory_reference": "https://www.ransomlook.io/api/group/endzone"
+    }
+  ]
+}

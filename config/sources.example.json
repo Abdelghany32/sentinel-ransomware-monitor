@@ -1,0 +1,22 @@
+{
+  "sources": [
+    {
+      "name": "Authorized JSON metadata feed",
+      "enabled": false,
+      "type": "json",
+      "url": "https://your-approved-feed.example/victims.json",
+      "delay_seconds": 3
+    },
+    {
+      "name": "Authorized Tor listing",
+      "enabled": false,
+      "type": "html",
+      "url": "http://replace-with-approved-address.onion/",
+      "proxy": "socks5h://127.0.0.1:9050",
+      "actor": "Replace with source actor",
+      "item_selector": ".victim-card",
+      "fields": {"name": ".victim-name", "country": ".country", "sector": ".sector"},
+      "delay_seconds": 10
+    }
+  ]
+}
